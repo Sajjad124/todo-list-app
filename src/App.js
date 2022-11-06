@@ -3,7 +3,7 @@ import "./App.css";
 import { useState } from "react";
 
 const App = () => {
-  const [inputList, setInputList] = useState("Buy Apple");
+  const [inputList, setInputList] = useState("");
   const [Items, setItems] = useState([]);
 
   const itemEvent = (event) => {
@@ -13,6 +13,7 @@ const App = () => {
     setItems((oldItems) => {
       return [...oldItems, inputList];
     });
+    setInputList("");
   };
 
   return (
@@ -21,11 +22,14 @@ const App = () => {
         <br />
         <h1>ToDo List</h1>
         <br />
-        <input type="text" placeholder="Add new item" onChange={itemEvent} />
+        <input
+          type="text"
+          placeholder="Add new item"
+          value={inputList}
+          onChange={itemEvent}
+        />
         <button onClick={listofItems}>+</button>
         <ol>
-          {/* <li>{inputList}</li> */}
-
           {Items.map((itemval) => {
             return <li>{itemval}</li>;
           })}
