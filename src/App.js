@@ -15,6 +15,9 @@ const App = () => {
     });
     setInputList("");
   };
+  const deleteItems = () => {
+    console.log("deleted");
+  };
 
   return (
     <div className="main_div">
@@ -30,8 +33,13 @@ const App = () => {
         />
         <button onClick={listofItems}>+</button>
         <ol>
-          {Items.map((itemval) => {
-            return <ToDolists style={{ color: "blue" }}> text={itemval} </ToDolists>;
+          {Items.map((itemval, index) => {
+            return (
+              <ToDolists key={index} id={index} style={{ color: "blue" }}
+                text={itemval}
+                onSelect = {deleteItems}
+              />
+            );
           })}
         </ol>
       </div>

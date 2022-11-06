@@ -1,3 +1,28 @@
-li{
-    color: #8566aa;
+/* .text {
+  color: #8566aa;
+} */
+
+.todo_style {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin-top: 10px;
+}
+.todo_style .fa-times {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #8566aa;
+  color: white;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+.todo_style .fa-times:hover {
+  background-color: #a84848;
 }
