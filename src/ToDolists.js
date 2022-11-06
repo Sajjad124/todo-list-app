@@ -6,7 +6,7 @@ const ToDolists = (props) => {
     <div className="todo_style">
       <i
         className="fa fa-times"
-        onClick={props.onSelect}
+        onClick={() => props.onSelect(props.id)}
         aria-hidden="true "
       ></i>
       <li className="text">{props.text}</li>
