@@ -1,6 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
+import ToDolists from "./ToDolists";
 
 const App = () => {
   const [inputList, setInputList] = useState("");
@@ -31,7 +31,7 @@ const App = () => {
         <button onClick={listofItems}>+</button>
         <ol>
           {Items.map((itemval) => {
-            return <li>{itemval}</li>;
+            return <ToDolists style={{ color: "blue" }}> text={itemval} </ToDolists>;
           })}
         </ol>
       </div>
