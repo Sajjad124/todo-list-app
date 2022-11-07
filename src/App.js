@@ -9,7 +9,8 @@ const App = () => {
   const itemEvent = (event) => {
     setInputList(event.target.value);
   };
-  const listofItems = () => {
+  const listofItems = (event) => {
+    event.preventDefault();
     setItems((oldItems) => {
       return [...oldItems, inputList];
     });
@@ -17,15 +18,15 @@ const App = () => {
   };
   const deleteItems = (id) => {
     console.log("deleted");
-    setItems((oldItems)=>{
-      return oldItems.filter((arrElem, index)=>{
-        return index !==id;
-      })
-    })
+    setItems((oldItems) => {
+      return oldItems.filter((arrElem, index) => {
+        return index !== id;
+      });
+    });
   };
 
   return (
-    <div className="main_div">
+    <form className="main_div" onSubmit={listofItems}>
       <div className="center_div">
         <br />
         <h1>ToDo List</h1>
@@ -35,20 +36,24 @@ const App = () => {
           placeholder="Add new item"
           value={inputList}
           onChange={itemEvent}
+          required
         />
-        <button onClick={listofItems}>+</button>
+        <button type="submit">+</button>
         <ol>
           {Items.map((itemval, index) => {
             return (
-              <ToDolists key={index} id={index} style={{ color: "blue" }}
+              <ToDolists
+                key={index}
+                id={index}
+                style={{ color: "blue" }}
                 text={itemval}
-                onSelect = {deleteItems}
+                onSelect={deleteItems}
               />
             );
           })}
         </ol>
       </div>
-    </div>
+    </form>
   );
 };
 
