@@ -12,10 +12,13 @@
   height: 100vh;
   background-color: #6983aa;
   text-align: center;
+  padding: 20px;
 }
 .center_div {
-  width: 25%;
-  width: 80vh;
+  width: 100%;
+  /* width: 80vh; */
+  padding: 20px;
+  height: 400px;
   background-color: #f4f4f4;
   box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
@@ -23,7 +26,7 @@
 h1 {
   color: white;
   background: transparent;
-  background-color: #8566aa;
+  background-color: #a84ea8;
   padding: 6px 0px 2px 0px;
   margin-bottom: 10px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
@@ -37,14 +40,14 @@ input {
   font-size: 20px;
   font-weight: 500;
   width: 60%;
-  color: #8566aa;
-  border-bottom: 2px solid #8566aa;
+  color: #a84ea8;
+  border-bottom: 2px solid #a84ea8;
 }
 button {
   min-height: 40px;
   width: 40px;
   border-radius: 50%;
-  background-color: #8566aa;
+  background-color: #a84ea8;
   color: white;
   font-size: 30px;
   border: none;
@@ -64,6 +67,6 @@ ol li {
   min-height: 40px;
   display: flex;
   align-items: center;
-  color: #8566aa;
+  color: #a84ea8;
   text-transform: capitalize;
 }
