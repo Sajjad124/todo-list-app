@@ -29,7 +29,7 @@ const App = () => {
     <form className="main_div" onSubmit={listofItems}>
       <div className="center_div">
         <br />
-        <h1>ToDo List</h1>
+        <h1>ToDo List App</h1>
         <br />
         <input
           type="text"
